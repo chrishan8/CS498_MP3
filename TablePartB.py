@@ -4,6 +4,6 @@ import re
 connection = hb.Connection()
 
 for table in connection.tables():
-    print(re.sub("[\'b]", "", str(table)))
+    print(table.decode("utf-8"))
 
 connection.close()
