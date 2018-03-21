@@ -7,7 +7,7 @@ table = connection.table('powers')
 with open('input.csv', newline='') as csvfile:
     reader = csv.reader(csvfile)
     for row in reader:
-        [rowId, hero, power, name, xp, color] = row.map(lambda x: x.encode())
+        [rowId, hero, power, name, xp, color] = list(map(lambda x: x.encode()), row)
         data = {
             b'personal:hero': hero,
             b'personal:power': power,
