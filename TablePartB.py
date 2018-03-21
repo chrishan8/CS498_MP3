@@ -5,6 +5,6 @@ connection = hb.Connection()
 print(connection.tables())
 
 for table in connection.tables():
-    print(table.split("'")[1])
+    print(table.split("\'")[1])
 
 connection.close()
