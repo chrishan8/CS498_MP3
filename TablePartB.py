@@ -6,6 +6,6 @@ connection = hb.Connection()
 print(connection.tables())
 
 for table in connection.tables():
-    print(re.sub("[\',b]", '', table))
+    print(table)
 
 connection.close()
