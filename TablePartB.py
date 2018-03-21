@@ -3,9 +3,7 @@ import re
 
 connection = hb.Connection()
 
-print(connection.tables())
-
 for table in connection.tables():
-    print(table)
+    print(re.sub("[\'b]", "", table))
 
 connection.close()
